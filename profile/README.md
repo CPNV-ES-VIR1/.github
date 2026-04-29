@@ -35,3 +35,4 @@ curl -X GET localhost/api/v1/customers/1 | jq
   "updated_at": "2026-04-29 10:43:39"
 }
 ```
+- [ ] [La solution proposée](https://github.com/CPNV-ES-VIR1/payroll-start-point/tree/feature/customers-solution)
