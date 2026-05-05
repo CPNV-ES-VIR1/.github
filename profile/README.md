@@ -36,3 +36,12 @@ curl -X GET localhost/api/v1/customers/1 | jq
 }
 ```
 - [ ] [La solution proposée](https://github.com/CPNV-ES-VIR1/payroll-start-point/tree/feature/customers-solution)
+
+## STEP 02 - Ajout du service "Departments"
+
+- [ ] Intégrer la branche ["/feature/departments"](https://github.com/CPNV-ES-VIR1/payroll-start-point/tree/feature/departments) à votre dépôt
+- [ ] [Télécharger l'archive contenant le nouveau service](https://etml-es-devops.s3.eu-west-1.amazonaws.com/ms-departments.zip)
+- [ ] Etudier le schéma livré dans le README.
+- [ ] Réaliser les modifications par couche (docker-compose, api-gateway, ajout du service) afin d'intégrer le service
+- [ ] Tester le nouveau service
+
