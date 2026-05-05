@@ -20,7 +20,7 @@ Voici la ROADMAP du laboratoire.
 - [ ] Réaliser les modifications par couche (docker-compose, api-gateway, ajout du service) afin d'intégrer le service
 - [ ] Tester le nouveau service
 
-```
+```bash
 curl -X GET localhost/api/v1/customers/1 | jq
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
@@ -43,5 +43,28 @@ curl -X GET localhost/api/v1/customers/1 | jq
 - [ ] [Télécharger l'archive contenant le nouveau service](https://etml-es-devops.s3.eu-west-1.amazonaws.com/ms-departments.zip)
 - [ ] Etudier le schéma livré dans le README.
 - [ ] Réaliser les modifications par couche (docker-compose, api-gateway, ajout du service) afin d'intégrer le service
-- [ ] Tester le nouveau service
+- [ ] Tester le nouveau service (vous obtenez d'abord cette erreur)
 
+```bash
+curl -X GET localhost/api/v1/departments | jq
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   107    0   107    0     0   3870      0 --:--:-- --:--:-- --:--:--  3962
+{
+  "timestamp": "2026-05-05T13:36:32.475+00:00",
+  "status": 404,
+  "error": "Not Found",
+  "path": "/api/v1/departments"
+}
+```
+
+- [ ] Des erreurs sont présentes dans le conteneurs "departments"... à vous de jouer ! (aidez-vous du microservice "employees")
+
+```bash
+curl -X GET localhost/api/v1/departments | jq
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100     2    0     2    0     0     13      0 --:--:-- --:--:-- --:--:--    13
+[]
+```
