@@ -77,7 +77,7 @@ curl -X GET localhost/api/v1/departments | jq
 
 ---
 
-## DRAFT - STEP 03 - Ajout du service "Departments"
+## DRAFT - STEP 03 - Ajout du service "Departments POST"
 
 - [ ] Intégrer la branche ["/feature/employees-post"](https://github.com/CPNV-ES-VIR1/payroll-start-point/tree/feature/employees-post) à votre dépôt
 - [ ] [Télécharger l'archive contenant le nouveau service](https://etml-es-devops.s3.eu-west-1.amazonaws.com/ms-employees-post.zip)
