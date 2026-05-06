@@ -2,6 +2,8 @@
 
 Voici la ROADMAP du laboratoire.
 
+---
+
 ## STEP 00 - Mise en place de l'environnement
 
 - [ ] Valider l'invitation à votre dépôt (voir dans gh->organisation)
@@ -11,6 +13,8 @@ Voici la ROADMAP du laboratoire.
 - [ ] Publier votre branche develop sur votre dépôt
 - [ ] Déployer la solution en lisant attentivement le README
 - [ ] Tester un maximum de commande décrites dans le README pour prendre en main le projet
+
+---
 
 ## STEP 01 - Ajout du service "Customers"
 
@@ -36,6 +40,8 @@ curl -X GET localhost/api/v1/customers/1 | jq
 }
 ```
 - [ ] [La solution proposée](https://github.com/CPNV-ES-VIR1/payroll-start-point/tree/feature/customers-solution)
+
+---
 
 ## STEP 02 - Ajout du service "Departments"
 
@@ -68,3 +74,21 @@ curl -X GET localhost/api/v1/departments | jq
 100     2    0     2    0     0     13      0 --:--:-- --:--:-- --:--:--    13
 []
 ```
+
+---
+
+## DRAFT - STEP 03 - Ajout du service "Departments"
+
+- [ ] Intégrer la branche ["/feature/employees-post"](https://github.com/CPNV-ES-VIR1/payroll-start-point/tree/feature/employees-post) à votre dépôt
+- [ ] [Télécharger l'archive contenant le nouveau service](https://etml-es-devops.s3.eu-west-1.amazonaws.com/ms-employees-post.zip)
+- [ ] Etudier le schéma livré dans le README.
+- [ ] Réaliser les modifications par couche (docker-compose, api-gateway, ajout du service) afin d'intégrer le service
+- [ ] Tester le nouveau service (vous obtenez d'abord cette erreur)
+
+Aide :
+
+Nginx permet d'utiliser des "upstreams" pour gérer le routage à l'aide du verbe HTTP.
+
+```bash
+```
+
