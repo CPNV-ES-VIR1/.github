@@ -75,20 +75,23 @@ curl -X GET localhost/api/v1/departments | jq
 []
 ```
 
+- [ ] [Solution proposée](https://github.com/CPNV-ES-VIR1/payroll-start-point/tree/feature/departments-solution)
+
 ---
 
-## DRAFT - STEP 03 - Ajout du service "Departments POST"
+## STEP 03 - Ajout du service "Employees POST"
 
 - [ ] Intégrer la branche ["/feature/employees-post"](https://github.com/CPNV-ES-VIR1/payroll-start-point/tree/feature/employees-post) à votre dépôt
-- [ ] [Télécharger l'archive contenant le nouveau service](https://etml-es-devops.s3.eu-west-1.amazonaws.com/ms-employees-post.zip)
+- [ ] [Télécharger l'archive contenant le nouveau service](https://etml-es-devops.s3.eu-west-1.amazonaws.com/ms-post.zip)
 - [ ] Etudier le schéma livré dans le README.
 - [ ] Réaliser les modifications par couche (docker-compose, api-gateway, ajout du service) afin d'intégrer le service
-- [ ] Tester le nouveau service (vous obtenez d'abord cette erreur)
 
 Aide :
 
 Nginx permet d'utiliser des "upstreams" pour gérer le routage à l'aide du verbe HTTP.
 
 ```bash
+
+
 ```
 
