@@ -116,9 +116,9 @@ Nginx permet d'utiliser des "upstreams" pour gérer le routage à l'aide du verb
 
 ```
     /* curl sample :
-    curl -i -X POST localhost:8080/api/v1/employees ^
-        -H "Content-type:application/json" ^
-        -d "{\"name\": \"Russel George\", \"role\": \"gardener\"}"
+    curl -i -X POST localhost/api/v1/employees \
+        -H 'Content-type:application/json' \
+        -d '{\"name\": \"Russel George\", \"role\": \"gardener\"}'
     */
 ```
 - [ ] Valider la création en appelant le ms-employees-get
