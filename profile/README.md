@@ -91,25 +91,26 @@ Aide :
 Nginx permet d'utiliser des "upstreams" pour gérer le routage à l'aide du verbe HTTP.
 
 ```bash
-//ajout d'un upstream
+//nginx.conf
+//ajout d un upstream
   upstream microservice_get {
       server ms-payroll-employees-get:8080;
   }
 
-//utilisation d'une map pour éviter les if/else imbriqués
+//utilisation d une map pour éviter les if/else imbriqués
   map $request_method $upstream_service {
       GET     microservice_get;
       default "";
   }
 
 //utilisation des upstreams pour rerouter les appels entrants
-    location /api/v1/employees {
-        if ($upstream_service = "") {
-            return 405;
-        }
-
-        proxy_pass http://$upstream_service;
+location /api/v1/employees {
+    if ($upstream_service = "") {
+        return 405;
     }
+
+    proxy_pass http://$upstream_service;
+}
 ```
 
 - [ ] Tester la création d'un employé
@@ -122,3 +123,5 @@ Nginx permet d'utiliser des "upstreams" pour gérer le routage à l'aide du verb
     */
 ```
 - [ ] Valider la création en appelant le ms-employees-get
+
+- [ ] Prouver techniquement comment valider que notre infrastructure fonctionne bien comme attendue, sans provoquer d'interruption de service
